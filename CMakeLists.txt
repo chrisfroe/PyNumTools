@@ -13,7 +13,8 @@ set(eigen_include_dir "${CMAKE_CURRENT_SOURCE_DIR}/lib/eigen")
 
 set(sources cpp/binding.cpp
         cpp/lgmres.h cpp/lgmres.cpp
-        cpp/util.h)
+        cpp/util.h
+        cpp/quadrature.h cpp/quadrature.cpp)
 
 pybind11_add_module(pynumtools_binding ${sources})
 
