@@ -15,7 +15,7 @@ namespace quad {
 
 using array_type = py::array_t<double, py::array::c_style>;
 
-double simps(const array_type &y, const array_type &x, double dx=-1, long axis = -1);
+double newton_cotes(const array_type &y, double dx, std::size_t n=1, long axis = -1);
 
 }
 
