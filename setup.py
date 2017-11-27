@@ -41,6 +41,16 @@ ext_modules = [
         extra_compile_args=['-std=c++14', '-O3', '-fvisibility=hidden']
         # -ffast-math
     ),
+    Extension(
+        'pynumtools.kmc.kmc_binding',
+        sources=['cpp/kmc/kmc_binding.cpp'],
+        language='c++',
+        include_dirs=[
+            get_pybind_include(), get_project_include(), get_numpy_include(), get_spdlog_include()
+        ],
+        extra_compile_args=['-std=c++14', '-O3', '-fvisibility=hidden']
+        # -ffast-math
+    ),
 ]
 
 
